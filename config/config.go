@@ -28,7 +28,8 @@ func New() (*Config, error) {
 
 	var config Config
 
-	config.Token = "6565885905:AAGpeOphD-WRQbHFQCVQ6A1ogdB4WS-UGv0"
+	//config.Token = "6565885905:AAGpeOphD-WRQbHFQCVQ6A1ogdB4WS-UGv0"
+	config.Token = "6891868565:AAH8EjTv9tSj_E6iDZvoXwSiMMDOTf3p1iA"
 	config.Host = "127.0.0.1"
 	config.Port = 5432
 	config.User = "postgres"
