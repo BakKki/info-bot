@@ -164,7 +164,33 @@ func (t *Telegram) handleRateBtn(ctx telebot.Context) error {
 }
 
 func (t *Telegram) handleFindOutMoreBtn(ctx telebot.Context) error {
+	////location, err := time.LoadLocation("Europe/Moscow")
+	////if err != nil {
+	////	log.Fatal(err)
+	////}
+	//
+	//startTime := time.Date(time.Now().Year(), time.Now().Month(), time.Now().Day(), 8, 0, 0, 0, time.Local)
+	//endTime := time.Date(time.Now().Year(), time.Now().Month(), time.Now().Day(), 0, 0, 0, 0, time.Local)
+	//
+	////currentTime := time.Now().Add(time.Hour * 3)
+	//currentTime := time.Now()
+	//
 	ids := []int64{1046179822, 1093312909}
+	//
+	//if !currentTime.After(startTime) && !currentTime.Before(endTime) {
+	//	for _, id := range ids {
+	//		chat, err := t.bot.ChatByID(id)
+	//		if err != nil {
+	//			continue
+	//		}
+	//
+	//		if _, err := t.bot.Send(chat, "@"+ctx.Sender().Username+" пытался написать"); err != nil {
+	//			return err
+	//		}
+	//	}
+	//
+	//	return ctx.Send("Поддержка EMIVN придет с 8:00 до 00:00 по МСК")
+	//}
 
 	for _, id := range ids {
 		chat, err := t.bot.ChatByID(id)
@@ -177,5 +203,6 @@ func (t *Telegram) handleFindOutMoreBtn(ctx telebot.Context) error {
 		}
 	}
 
-	return ctx.Send("Благодарим за повышенный интерес к нашему проекту, в скором времени к вам обратится менеджер, для продолжения обсуждения\nВремя работы клиентской поддержки с 10:00 до 22:00 по мск")
+	return ctx.Send("Благодарим за повышенный интерес к нашему проекту, в скором времени к вам обратится менеджер, " +
+		"для продолжения обсуждения\nВремя работы клиентской поддержки с 10:00 до 22:00 по мск")
 }
